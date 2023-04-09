@@ -1,0 +1,71 @@
+@use '../../../assets/styles/config-scss/rem-calc-function.scss' as pxToRem;
+
+::ng-deep {
+  .p-sidebar-close-icon {
+    color: var(--rich-black);
+  }
+}
+
+header {
+  width: 100%;
+  height: pxToRem.rem-calc(70);
+  background: rgb(0,8,20);
+  background: linear-gradient(180deg, rgba(0,8,20,1) 0%, rgba(0,8,20,0.85) 99%, rgba(0,8,20,0) 100%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo-box {
+    height: 90%;
+    width: 30%;
+    background-image: url('../../../assets/images/logo/logo-new.png');
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-left: 1rem;
+    cursor: pointer;
+  }
+
+  .sidebar-container {
+    ul {
+      width: 100%;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+
+      li {
+        text-align: center;
+        font-size: 1.5rem;
+        color: var(--rich-black);
+        margin: 1rem 0;
+
+        a {
+          color: var(--rich-black);
+          position: relative;
+          text-decoration: none;
+
+          &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            border-radius: 4px;
+            background-color: var(--rich-black);
+            bottom: 0;
+            left: 0;
+            transform-origin: right;
+            transform: scaleX(0);
+            transition: transform .3s ease-in-out;
+          }
+
+          &:hover::before {
+            transform-origin: left;
+            transform: scaleX(1);
+          }
+
+        }
+      }
+    }
+  }
+
+}

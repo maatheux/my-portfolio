@@ -1,16 +1,17 @@
 @use './assets/styles/config-scss/reset.scss';
 @use './assets/styles/config-scss/rem-calc-function.scss' as pxToRem;
+@use './assets/styles/config-scss/variables.scss';
 
 
 html {
   font-family: 'Poppins', sans-serif;
-  background-color: var(--primary-color);
   width: 100vw;
   overflow-x: hidden;
   scroll-behavior: smooth;
-  background: #0F2027;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-color: var(--mikado-yellow);
+  //background: #0F2027;  /* fallback for old browsers */
+  //background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+  //background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 
 }

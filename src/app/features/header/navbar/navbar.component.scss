@@ -1,0 +1,27 @@
+::ng-deep {
+  .p-sidebar-close-icon {
+    color: var(--rich-black);
+  }
+}
+
+:host {
+
+  ul {
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+    li {
+      text-align: center;
+      font-size: 1.5rem;
+      color: var(--rich-black);
+      margin-bottom: 2rem;
+
+      a {
+        color: var(--rich-black);
+      }
+    }
+  }
+
+}
