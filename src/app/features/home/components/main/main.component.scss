@@ -1,0 +1,51 @@
+@use 'src/assets/styles/config-scss/rem-calc-function.scss' as pxToRem;
+
+:host {
+
+  .main-section {
+    width: 100%;
+    height: calc(100vh - pxToRem.rem-calc(80));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    .greetings-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+
+      .greetings-text {
+
+        p:not(:last-of-type) {
+          width: 100%;
+          font-weight: 700;
+          font-size: 2rem;
+          text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+
+          &:last-of-type {
+            font-size: 1.3rem;
+            color: var(--oxford-blue);
+            text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+
+          }
+        }
+
+        &:last-child {
+          font-size: 1.2rem;
+          font-weight: 400;
+          color: #001d3dff !important;
+          text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+        }
+      }
+    }
+
+    .profesional-title {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+  }
+}
