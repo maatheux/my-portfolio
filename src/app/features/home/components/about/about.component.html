@@ -1,1 +1,18 @@
-<p>about works!</p>
+<section class="about-container">
+  <h2>About Me</h2>
+  <p>I'm a Software Engineer student and Full Stack Developer. My main responsibility is to develop and maintain web pages for our client's website, with a focus on the Customer Success team. This involves creating various Customer Success metrics, charts, refreshable tables, and customer data registration forms using Angular, Typescript, SCSS in Front End and developing new features in a C# Back End system with .NET and Entity Framework. </p>
+
+  <div class="work-experince-container">
+    <h3>Work Experience</h3>
+    <p-timeline [value]="jobHistory">
+      <ng-template pTemplate="content" let-job>
+        <p-card [header]="job.title" [subheader]="job.subtitle">
+          <ol [ngStyle]="{'padding-left': '1rem'}">
+            <li [ngStyle]="{'list-style-type': 'disc', 'margin-bottom': '0.5rem'}" *ngFor="let item of job.info">{{item}}</li>
+          </ol>
+        </p-card>
+      </ng-template>
+
+    </p-timeline>
+  </div>
+</section>
