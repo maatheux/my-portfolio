@@ -1,0 +1,85 @@
+@use 'src/assets/styles/config-scss/rem-calc-function.scss' as pxToRem;
+
+:host {
+  .projects-container {
+    padding: 3rem 0;
+
+    h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 2.5rem;
+      color: #fff;
+      text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+      width: 100%;
+      text-align: center;
+    }
+
+    .project-item {
+      width: '100%';
+      height: pxToRem.rem-calc(160) !important;
+      background-position: left top;
+      background-repeat: no-repeat;
+      background-size: 120%;
+      transition: all .5s;
+      border-radius: 4px;
+
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+
+      .title-box {
+        padding-bottom: 0.2rem;
+
+        span {
+
+          .pi {
+            margin-left: .2rem;
+            font-size: .75rem;
+          }
+
+          &:first-of-type {
+            font-weight: 400;
+            font-size: 1.1rem;
+            color: #fff;
+            padding: 0.25rem;
+            border-radius: 0 6px 0 0;
+            background: #7a7575;
+
+          }
+        }
+      }
+
+      .links-box {
+        padding: 0.2rem 0;
+        border-radius: 6px 0 0 0;
+        background: #7a7575;
+        display: flex;
+        justify-content: space-around;
+        width: 25%;
+
+        a {
+          text-decoration: none;
+
+          i {
+            color: #fff;
+            font-size: 1.4rem;
+            padding: 0 !important;
+            margin: 0 !important;
+          }
+
+          &:hover {
+
+            i {
+              color: #e4e3e3;
+            }
+          }
+        }
+      }
+
+      &:hover {
+        transition: all 1s;
+        background-size: 130%;
+      }
+    }
+  }
+}

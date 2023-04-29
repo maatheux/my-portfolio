@@ -1,0 +1,40 @@
+<div class="projects-container">
+  <h2>Projects</h2>
+
+  <p-carousel
+    [value]="projectsInfo"
+    [circular]="false"
+    [responsiveOptions]="responsiveOptions"
+  >
+    <ng-template let-project pTemplate="item">
+      <div
+        class="project-item"
+        [ngStyle]="{
+          'background-image': 'url('+project.imageUrl+')'
+        }"
+      >
+        <div class="title-box">
+          <span>
+            {{project.title}}
+            <i
+              class="pi pi-info-circle"
+              pTooltip="It is under construction"
+              tooltipPosition="top"
+              *ngIf="project.isUnderConstruction"
+            ></i>
+          </span>
+        </div>
+
+        <div class="links-box">
+          <a href="{{project.projectUrl}}" target="_blank" rel="noopener noreferrer">
+            <i class="pi pi-github" pTooltip="Github Link" tooltipPosition="top"></i>
+          </a>
+          <a href="{{project.projectUrl}}" target="_blank" rel="noopener noreferrer">
+            <i class="pi pi-link" pTooltip="Project Link" tooltipPosition="top"></i>
+          </a>
+        </div>
+      </div>
+    </ng-template>
+
+  </p-carousel>
+</div>

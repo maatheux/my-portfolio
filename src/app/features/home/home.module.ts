@@ -5,6 +5,8 @@ import { CarouselModule } from 'primeng/carousel';
 import { AboutComponent } from './components/about/about.component';
 import { TimelineModule } from 'primeng/timeline';
 import { CardModule } from 'primeng/card';
+import { TooltipModule } from 'primeng/tooltip';
+import { ProjectsComponent } from './components/projects/projects.component';
 
 
 
@@ -12,17 +14,20 @@ import { CardModule } from 'primeng/card';
 @NgModule({
   declarations: [
     MainComponent,
-    AboutComponent
+    AboutComponent,
+    ProjectsComponent
   ],
   imports: [
     CommonModule,
     CarouselModule,
     TimelineModule,
     CardModule,
+    TooltipModule,
   ],
   exports: [
     MainComponent,
     AboutComponent,
+    ProjectsComponent,
   ]
 })
 export class HomeModule { }
