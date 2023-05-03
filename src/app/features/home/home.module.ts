@@ -7,6 +7,10 @@ import { TimelineModule } from 'primeng/timeline';
 import { CardModule } from 'primeng/card';
 import { TooltipModule } from 'primeng/tooltip';
 import { ProjectsComponent } from './components/projects/projects.component';
+import { ButtonModule } from 'primeng/button';
+import { ContactComponent } from './components/contact/contact.component';
+import { ToastModule } from 'primeng/toast';
+import { MessageService } from 'primeng/api';
 
 
 
@@ -15,7 +19,8 @@ import { ProjectsComponent } from './components/projects/projects.component';
   declarations: [
     MainComponent,
     AboutComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    ContactComponent,
   ],
   imports: [
     CommonModule,
@@ -23,11 +28,17 @@ import { ProjectsComponent } from './components/projects/projects.component';
     TimelineModule,
     CardModule,
     TooltipModule,
+    ButtonModule,
+    ToastModule,
   ],
   exports: [
     MainComponent,
     AboutComponent,
     ProjectsComponent,
+    ContactComponent,
+  ],
+  providers: [
+    MessageService
   ]
 })
 export class HomeModule { }

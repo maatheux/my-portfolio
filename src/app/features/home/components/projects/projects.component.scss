@@ -1,5 +1,11 @@
 @use 'src/assets/styles/config-scss/rem-calc-function.scss' as pxToRem;
 
+::ng-deep {
+  .p-link {
+    background-color: var(--yale-blue);
+  }
+}
+
 :host {
   .projects-container {
     padding: 3rem 0;
