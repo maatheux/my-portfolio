@@ -19,7 +19,35 @@
     <app-contact></app-contact>
   </div>
 
-  <footer>
-    <app-footer></app-footer>
-  </footer>
 </main>
+
+<footer>
+  <app-footer></app-footer>
+</footer>
+
+<p-dialog
+  [(visible)]="displayVisibility"
+  [modal]="true"
+  [draggable]="false"
+>
+  <p
+    [ngStyle]="{
+      'font-weight': '700',
+      'font-size': '2rem',
+      'text-align': 'center',
+      'color': '#ff5000',
+      'margin-bottom': '2rem'
+    }"
+  >
+    Warning
+  </p>
+  <p>This page is under construction. We recommend using it on mobile devices.</p>
+  <ng-template pTemplate="footer">
+    <p-button
+      (click)="displayVisibility=false"
+      label="Ok"
+      styleClass="p-button-text"
+    ></p-button>
+  </ng-template>
+
+</p-dialog>

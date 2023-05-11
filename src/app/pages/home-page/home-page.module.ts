@@ -4,6 +4,8 @@ import { HomePageComponent } from './home-page.component';
 import { HeaderModule } from '@features/header/header.module';
 import { HomeModule } from '@features/home/home.module';
 import { FooterModule } from '@features/footer/footer.module';
+import { DialogModule } from 'primeng/dialog';
+import { ButtonModule } from 'primeng/button';
 
 
 
@@ -16,6 +18,8 @@ import { FooterModule } from '@features/footer/footer.module';
     HeaderModule,
     HomeModule,
     FooterModule,
+    DialogModule,
+    ButtonModule,
   ]
 })
 export class HomePageModule { }
