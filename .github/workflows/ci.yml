@@ -30,14 +30,14 @@ jobs:
         run: npm install
 
       - name: Build project
-        run: npm run build -- --configuration=production
+        run: npm run build -- --prod
 
       - name: Deploy to Hostinger
         uses: easingthemes/ssh-deploy@main
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           ARGS: "-rlgoDzvc --delete"
-          SOURCE: "src/"
+          SOURCE: "dist/"
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
           REMOTE_PORT: ${{ secrets.REMOTE_PORT }}
