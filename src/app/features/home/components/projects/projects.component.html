@@ -10,8 +10,10 @@
       <div
         class="project-item"
         [ngStyle]="{
-          'background-image': 'url('+project.imageUrl+')'
+          'background-image': 'url('+project.imageUrl+')',
+          'cursor': 'pointer'
         }"
+        (click)="linksPanel.toggle($event)"
       >
         <div class="title-box">
           <span>
@@ -25,16 +27,26 @@
           </span>
         </div>
 
-        <div class="links-box">
+        <!-- <div class="links-box">
           <a href="{{project.githubUrl}}" target="_blank" rel="noopener noreferrer">
             <i class="pi pi-github" pTooltip="Github Link" tooltipPosition="top"></i>
           </a>
           <a href="{{project.projectUrl}}" target="_blank" rel="noopener noreferrer">
             <i class="pi pi-link" pTooltip="Project Link" tooltipPosition="top"></i>
           </a>
-        </div>
+        </div> -->
       </div>
+
     </ng-template>
 
   </p-carousel>
+
+  <p-overlayPanel #linksPanel>
+    <ng-template pTemplate>
+      <div class="links-box">
+        <button pButton pRipple label="Link do projeto no Github" icon="pi pi-github"></button>
+        <button pButton pRipple label="Link do projeto" icon="pi pi-link"></button>
+      </div>
+    </ng-template>
+  </p-overlayPanel>
 </div>

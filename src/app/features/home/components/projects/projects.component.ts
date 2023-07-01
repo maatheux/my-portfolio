@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CarouselResponsiveOptions } from '@features/home/models/projects/carousel-responsive-options';
+import { Carousel } from 'primeng/carousel';
 import { ProjectsInfo } from '@features/home/models/projects/projects-info';
 
 @Component({
@@ -14,6 +15,8 @@ export class ProjectsComponent implements OnInit {
   public responsiveOptions: CarouselResponsiveOptions[] = [];
 
   constructor() {
+    Carousel.prototype.onTouchMove = () => { };
+
     this.responsiveOptions = [
       {
         breakpoint: '1980px',
