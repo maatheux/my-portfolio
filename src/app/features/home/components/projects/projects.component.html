@@ -37,16 +37,21 @@
         </div> -->
       </div>
 
+      <p-overlayPanel #linksPanel>
+        <ng-template pTemplate>
+          <div class="links-box">
+            <a href="{{project.githubUrl}}" target="_blank">
+              <button pButton pRipple label="Link do projeto no Github" icon="pi pi-github"></button>
+            </a>
+            <a href="{{project.projectUrl}}" target="_blank">
+              <button pButton pRipple label="Link do projeto" icon="pi pi-link"></button>
+            </a>
+          </div>
+        </ng-template>
+      </p-overlayPanel>
+
     </ng-template>
 
   </p-carousel>
 
-  <p-overlayPanel #linksPanel>
-    <ng-template pTemplate>
-      <div class="links-box">
-        <button pButton pRipple label="Link do projeto no Github" icon="pi pi-github"></button>
-        <button pButton pRipple label="Link do projeto" icon="pi pi-link"></button>
-      </div>
-    </ng-template>
-  </p-overlayPanel>
 </div>
