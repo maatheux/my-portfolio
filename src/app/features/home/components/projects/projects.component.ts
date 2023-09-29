@@ -42,6 +42,13 @@ export class ProjectsComponent implements OnInit {
 
     this.projectsInfo = [
       {
+        title: 'Meu Time Project',
+        imageUrl: '../../../../../assets/images/projects/meu-time-img.png',
+        githubUrl: 'https://github.com/maatheux/football-project',
+        projectUrl: 'https://meutime.matheuslima.net',
+        isUnderConstruction: false,
+      },
+      {
         title: 'Pokedex Project',
         imageUrl: '../../../../../assets/images/projects/pokedex-img.png',
         githubUrl: 'https://github.com/maatheux/pokedex',

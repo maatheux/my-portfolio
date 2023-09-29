@@ -18,23 +18,12 @@
         <div class="title-box">
           <span>
             {{project.title}}
-            <i
-              class="pi pi-info-circle"
-              pTooltip="It is under construction"
-              tooltipPosition="top"
-              *ngIf="project.isUnderConstruction"
-            ></i>
           </span>
         </div>
 
-        <!-- <div class="links-box">
-          <a href="{{project.githubUrl}}" target="_blank" rel="noopener noreferrer">
-            <i class="pi pi-github" pTooltip="Github Link" tooltipPosition="top"></i>
-          </a>
-          <a href="{{project.projectUrl}}" target="_blank" rel="noopener noreferrer">
-            <i class="pi pi-link" pTooltip="Project Link" tooltipPosition="top"></i>
-          </a>
-        </div> -->
+        <div class="is-under-construction-warning" *ngIf="project.isUnderConstruction">
+          <span>It is under construction</span>
+        </div>
       </div>
 
       <p-overlayPanel #linksPanel>
@@ -43,7 +32,7 @@
             <a href="{{project.githubUrl}}" target="_blank">
               <button pButton pRipple label="Link do projeto no Github" icon="pi pi-github"></button>
             </a>
-            <a href="{{project.projectUrl}}" target="_blank">
+            <a href="{{project.projectUrl}}" target="_blank" *ngIf="project.projectUrl !== undefined">
               <button pButton pRipple label="Link do projeto" icon="pi pi-link"></button>
             </a>
           </div>

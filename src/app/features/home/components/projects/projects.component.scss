@@ -62,6 +62,14 @@
         }
       }
 
+      .is-under-construction-warning {
+        font-weight: 400;
+        color: #fff;
+        padding: 0.25rem;
+        border-radius: 0 6px 0 0;
+        background: rgba(122, 117, 117, 0.6);
+      }
+
       &:hover {
         transition: all 1s;
         background-size: 130%;

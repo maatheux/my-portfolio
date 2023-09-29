@@ -11,7 +11,7 @@
   </nav>
 
   <div class="sidebar-container">
-    <p-sidebar [(visible)]="sidebarState" [fullScreen]="true" [baseZIndex]="10000">
+    <p-sidebar [(visible)]="sidebarState" [fullScreen]="true" [baseZIndex]="10000" [modal]="true" [blockScroll]="true">
       <ul>
         <li><a href="#home" (click)="HandleSidebar()">Home</a></li>
         <li><a href="#about" (click)="HandleSidebar()">About Me</a></li>
