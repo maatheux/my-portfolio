@@ -11,8 +11,8 @@ export class AboutComponent implements OnInit {
   public jobHistory = [
     {
       title: 'Full Stack Developer - Maminfo',
-      subtitle: '11/2023 - current',
-      info: ["Developing web pages for our client's website, focused on the Customer Success team. Creating Customer Success metrics, charts, refreshable tables, and customer data registration forms. I work using Angular, Typescript, SCSS, RxJs, and PrimeNG.", "Developing new features on the Front End that help it to be more useful and faster. I am using Lazy Loading feature to avoid data overcharge.", "Developing unit tests on Angular projects with Karma and Jasmine.", "Updating  layouts.", "Developing new features in a C# Back End system with .NET and Entity Framework.", "Developing automatic activities using Python, Pandas, and some other libraries. Developing code to create and use CSV, XLSX and JSON data files. Connecting to SQL Servers database to insert, and get some data."]
+      subtitle: '11/2022 - current',
+      info: ["Developing web pages for our client's website, focused on the Customer Success team. Creating Customer Success metrics, charts, refreshable tables, and customer data registration forms. I work using Angular, Typescript, SCSS, RxJs, and PrimeNG.", "Developing new features on the Front End that help it to be more useful and faster. In our project we have been using Lazy Loading feature to avoid data overcharge.", "Developing unit tests on Angular projects with Karma and Jasmine.", "Developing new features in a C# Back End system with .NET and Entity Framework.", "Working with CI/CD pipelines to deploy on AWS Cloud", "Developing automatic activities using Python, Pandas, and some other libraries. Developing code to create and use CSV, XLSX and JSON data files. Connecting to SQL Servers database to insert, and get some data."]
     },
     {
       title: 'Intern - Oi S.A.',

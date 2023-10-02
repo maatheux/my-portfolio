@@ -1,5 +1,5 @@
 <section class="header-container">
-  <div class="logo-box" id="home"></div>
+  <div class="logo-box" (click)="RouteToHome()"></div>
 
   <nav *ngIf="false">
     <ul>
@@ -11,7 +11,7 @@
   </nav>
 
   <div class="sidebar-container">
-    <p-sidebar [(visible)]="sidebarState" [fullScreen]="true" [baseZIndex]="10000" [modal]="true" [blockScroll]="true">
+    <p-sidebar [(visible)]="sidebarState" [fullScreen]="true" [baseZIndex]="10000" [modal]="true" [blockScroll]="true" (onHide)="CloseSidebar()">
       <ul>
         <li><a href="#home" (click)="HandleSidebar()">Home</a></li>
         <li><a href="#about" (click)="HandleSidebar()">About Me</a></li>

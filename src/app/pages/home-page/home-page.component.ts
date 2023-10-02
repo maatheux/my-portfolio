@@ -14,6 +14,8 @@ export class HomePageComponent implements OnInit {
   private header: any;
   private headerHeight: any;
 
+  private sideBarState: boolean = false;
+
   @HostListener('window:resize', ['$event'])
   onWindowResize(event?: Event) {
     this.windowWidth = window.innerWidth;
@@ -24,10 +26,10 @@ export class HomePageComponent implements OnInit {
 
   @HostListener('document:scroll', ['$event'])
   onWindowScroll(event?: Event) {
-    if (window.scrollY > this.headerHeight + 10 && window.scrollY < this.headerHeight + 30) {
+    if (window.scrollY > this.headerHeight + 10 && window.scrollY < this.headerHeight + 30 && !this.sideBarState) {
       this.header.classList.add('before-fixed-header');
     }
-    else if (window.scrollY > this.headerHeight + 30) {
+    else if (window.scrollY > this.headerHeight + 30 && !this.sideBarState) {
       this.header.classList.remove('before-fixed-header');
       this.header.classList.add('fixed-header');
     } else {
@@ -45,7 +47,10 @@ export class HomePageComponent implements OnInit {
     this.headerHeight = this.header.offsetHeight;
   }
 
-
+  HandleSidebar(event: boolean) {
+    this.sideBarState = event;
+    event ? this.header.classList.remove('fixed-header') : this.header.classList.add('fixed-header');
+  }
 
 
 
