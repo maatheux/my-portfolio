@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CarouselResponsiveOptions } from '@features/home/models/projects/carousel-responsive-options';
+import { Carousel } from 'primeng/carousel';
 import { ProjectsInfo } from '@features/home/models/projects/projects-info';
 
 @Component({
@@ -14,6 +15,8 @@ export class ProjectsComponent implements OnInit {
   public responsiveOptions: CarouselResponsiveOptions[] = [];
 
   constructor() {
+    Carousel.prototype.onTouchMove = () => { };
+
     this.responsiveOptions = [
       {
         breakpoint: '1980px',
@@ -38,6 +41,13 @@ export class ProjectsComponent implements OnInit {
     ];
 
     this.projectsInfo = [
+      {
+        title: 'Meu Time Project',
+        imageUrl: '../../../../../assets/images/projects/meu-time-img.png',
+        githubUrl: 'https://github.com/maatheux/football-project',
+        projectUrl: 'https://meutime.matheuslima.net',
+        isUnderConstruction: false,
+      },
       {
         title: 'Pokedex Project',
         imageUrl: '../../../../../assets/images/projects/pokedex-img.png',

@@ -62,34 +62,12 @@
         }
       }
 
-      .links-box {
-        padding: .3rem 0 0.1rem;
+      .is-under-construction-warning {
+        font-weight: 400;
+        color: #fff;
+        padding: 0.25rem;
         border-radius: 0 6px 0 0;
         background: rgba(122, 117, 117, 0.6);
-        min-width: pxToRem.rem-calc(100);
-        max-width: pxToRem.rem-calc(100);
-
-        display: flex;
-        justify-content: space-around;
-        width: 25%;
-
-        a {
-          text-decoration: none;
-
-          i {
-            color: #fff;
-            font-size: 1.4rem;
-            padding: 0 !important;
-            margin: 0 !important;
-          }
-
-          &:hover {
-
-            i {
-              color: #e4e3e3;
-            }
-          }
-        }
       }
 
       &:hover {
@@ -97,5 +75,14 @@
         background-size: 130%;
       }
     }
+
   }
+}
+
+.links-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: pxToRem.rem-calc(100) !important;
 }

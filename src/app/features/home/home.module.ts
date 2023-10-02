@@ -10,6 +10,7 @@ import { ProjectsComponent } from './components/projects/projects.component';
 import { ButtonModule } from 'primeng/button';
 import { ContactComponent } from './components/contact/contact.component';
 import { ToastModule } from 'primeng/toast';
+import { OverlayPanelModule } from 'primeng/overlaypanel';
 import { MessageService } from 'primeng/api';
 
 
@@ -30,6 +31,7 @@ import { MessageService } from 'primeng/api';
     TooltipModule,
     ButtonModule,
     ToastModule,
+    OverlayPanelModule,
   ],
   exports: [
     MainComponent,
