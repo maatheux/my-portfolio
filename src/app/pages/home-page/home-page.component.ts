@@ -16,13 +16,13 @@ export class HomePageComponent implements OnInit {
 
   private sideBarState: boolean = false;
 
-  @HostListener('window:resize', ['$event'])
+  /* @HostListener('window:resize', ['$event'])
   onWindowResize(event?: Event) {
     this.windowWidth = window.innerWidth;
 
     if (this.windowWidth > 1024) this.displayVisibility = true;
 
-  }
+  } */
 
   @HostListener('document:scroll', ['$event'])
   onWindowScroll(event?: Event) {
@@ -41,7 +41,7 @@ export class HomePageComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.onWindowResize();
+    //this.onWindowResize();
 
     this.header = document.querySelector('header');
     this.headerHeight = this.header.offsetHeight;
