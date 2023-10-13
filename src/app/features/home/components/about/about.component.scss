@@ -1,3 +1,5 @@
+@use 'src/assets/styles/config-scss/rem-calc-function.scss' as pxToRem;
+
 ::ng-deep {
   .p-timeline-event-opposite{
     display: none;
@@ -16,20 +18,66 @@
     background-color: var(--rich-black);
     padding: 8rem 1.5rem;
 
-    h2 {
-      font-size: 2rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-      color: var(--yale-blue);
+    .about-info-container {
+      h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        color: var(--yale-blue);
 
-    }
+      }
 
-    p {
-      color: #fff;
-      margin-bottom: 8rem;
+      p {
+        color: #fff;
+        margin-bottom: 8rem;
+      }
     }
 
     .work-experince-container {
+      h3 {
+        font-weight: 400;
+        font-size: 1.4rem;
+        color: #fff;
+        margin-bottom: 1rem;
+      }
+    }
+
+  }
+}
+
+@media screen and (min-width: pxToRem.rem-calc(1024)) {
+  .about-container {
+    padding: 6rem 3rem !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .about-info-container {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 6rem;
+      max-width: pxToRem.rem-calc(1440);
+
+      h2 {
+        width: 35%;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        margin-bottom: 0rem !important;
+
+      }
+
+      p {
+        width: 65%;
+        max-width: pxToRem.rem-calc(800);
+        margin-bottom: 0rem !important;
+      }
+    }
+
+    .work-experince-container {
+      max-width: pxToRem.rem-calc(960);
+      width: 100%;
+
       h3 {
         font-weight: 400;
         font-size: 1.4rem;

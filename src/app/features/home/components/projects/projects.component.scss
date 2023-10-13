@@ -26,7 +26,7 @@
 
     .project-item {
       width: '100%';
-      height: pxToRem.rem-calc(160) !important;
+      height: pxToRem.rem-calc(160);
       background-position: left top;
       background-repeat: no-repeat;
       background-size: 120%;
@@ -85,4 +85,27 @@
   justify-content: space-around;
   align-items: center;
   height: pxToRem.rem-calc(100) !important;
+}
+
+@media screen and (min-width: pxToRem.rem-calc(1024)) {
+  .projects-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .carousel-container {
+      max-width: pxToRem.rem-calc(960) !important;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+
+      .project-item {
+        height: 13.5vw !important;
+        max-height: pxToRem.rem-calc(250) !important;
+
+      }
+    }
+
+  }
 }

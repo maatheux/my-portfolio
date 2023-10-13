@@ -1,3 +1,5 @@
+@use 'src/assets/styles/config-scss/rem-calc-function.scss' as pxToRem;
+
 ::ng-deep {
   .p-button {
     background-color: var(--yale-blue);
@@ -46,3 +48,23 @@
   }
 }
 
+
+@media screen and (min-width: pxToRem.rem-calc(1024)) {
+  .contact-container {
+
+    .links-container {
+      display: flex;
+      justify-content: center;
+
+      ul {
+        max-width: pxToRem.rem-calc(960) !important;
+        justify-content: space-between !important;
+
+        button {
+          width: 10rem !important;
+        }
+
+      }
+    }
+  }
+}

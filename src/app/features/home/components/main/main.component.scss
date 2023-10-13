@@ -42,11 +42,46 @@
       }
     }
 
-    .profesional-title {
+    /* .profesional-title {
       width: 100%;
       display: flex;
       justify-content: center;
+    } */
+
+  }
+}
+
+@media screen and (min-width: pxToRem.rem-calc(1024)) {
+  .greetings-container {
+    align-items: center;
+
+    .greetings-text {
+      margin-right: 1rem;
+
+      p:not(:last-of-type) {
+        font-size: 3.5rem !important;
+      }
+
+      .profesional-title {
+        font-size: 1.2rem;
+      }
     }
 
+    .frufru-img-container {
+      margin-left: 0.5rem;
+      padding: 0 1rem;
+      width: 22%;
+      height: 150%;
+
+
+      .computer-img {
+        height: 100%;
+        width: 100%;
+        background-image: url('https://raw.githubusercontent.com/MicaelliMedeiros/micaellimedeiros/master/image/computer-illustration.png');
+        background-position: left;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+    }
   }
 }
