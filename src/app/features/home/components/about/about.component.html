@@ -1,7 +1,7 @@
 <section class="about-container">
   <div class="about-info-container">
     <h2>About Me</h2>
-    <p>I'm a Software Engineer student and Full Stack Developer. My main responsibility is to develop and maintain web pages for our client's website, with a focus on the Customer Success team. This involves creating various Customer Success metrics, charts, refreshable tables, and customer data registration forms using Angular, Typescript, SCSS in Front End and developing new features in a C# Back End system with .NET and Entity Framework. </p>
+    <p>I'm a Full Stack Developer and a Software Engineering student, and I work on developing systems and creating process automation. I have experience working with web systems, developing features and updates for Front-End and Back-End. I have experience with Angular, Typescript, and SCSS for Front-End development, C# and .NET for Back-End development, and SQL Server for database management. I also know Python, Java, Kotlin, C++ and AWS services. </p>
   </div>
 
   <div class="work-experince-container">
@@ -9,9 +9,15 @@
     <p-timeline [value]="jobHistory">
       <ng-template pTemplate="content" let-job>
         <p-card [header]="job.title" [subheader]="job.subtitle">
-          <ol [ngStyle]="{'padding-left': '1rem'}">
+          <p *ngIf="job?.introduce" [ngStyle]="{'margin-bottom': '1.75rem', 'font-size': '1.2rem'}">{{job?.introduce}}</p>
+
+          <h4 [ngStyle]="{'margin-bottom': '0.25rem', 'font-weight': '700'}">Main responsabilities:</h4>
+          <ol [ngStyle]="{'padding-left': '1rem', 'margin-bottom': '1.75rem'}">
             <li [ngStyle]="{'list-style-type': 'disc', 'margin-bottom': '0.5rem'}" *ngFor="let item of job.info">{{item}}</li>
           </ol>
+
+          <h4 *ngIf="job?.tools" [ngStyle]="{'margin-bottom': '0.25rem', 'font-weight': '700'}">Key technologies and tools:</h4>
+          <p>{{job?.tools}}</p>
         </p-card>
       </ng-template>
 
