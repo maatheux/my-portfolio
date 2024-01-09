@@ -70,7 +70,7 @@ export class ProjectsComponent implements OnInit {
         title: 'Beauty Salon Project',
         imageUrl: '../../../../../assets/images/projects/beauty-salon-img.png',
         githubUrl: 'https://github.com/maatheux/Origin-Six',
-        projectUrl: 'https://maatheux.github.io/Origin-Six/index.html',
+        projectUrl: 'https://maatheux.github.io/beauty-salon-webpage/',
         isUnderConstruction: false,
       },
       {
