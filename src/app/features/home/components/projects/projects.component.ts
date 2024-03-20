@@ -47,6 +47,24 @@ export class ProjectsComponent implements OnInit {
 
     this.projectsInfo = [
       {
+        title: 'Theater System API',
+        imageUrl: '../../../../../assets/images/projects/theater-img.jpeg',
+        githubUrl: 'https://github.com/maatheux/theater-system-api',
+        isUnderConstruction: false,
+      },
+      {
+        title: 'My Games Project',
+        imageUrl: '../../../../../assets/images/projects/my-games-img.png',
+        githubUrl: 'https://github.com/maatheux/my-games-dotnet',
+        isUnderConstruction: false,
+      },
+      {
+        title: 'COH-PIAH Project',
+        imageUrl: '../../../../../assets/images/projects/coh-piah-project-img.jpeg',
+        githubUrl: 'https://github.com/maatheux/algoritmo-detecta-copia',
+        isUnderConstruction: false,
+      },
+      {
         title: 'Meu Time Project',
         imageUrl: '../../../../../assets/images/projects/meu-time-img.png',
         githubUrl: 'https://github.com/maatheux/football-project',
